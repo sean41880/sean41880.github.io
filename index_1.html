@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sean Chou｜履歷</title>
+<meta name="description" content="Chou, Tzu-Hsiang (Sean) — 陽明交通大學網路工程研究所。研究領域：神經影像／影片壓縮、World Model。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfbf9;
+    --surface: #ffffff;
+    --text: #1d1f22;
+    --muted: #62666d;
+    --line: #e4e4df;
+    --accent: #2459d6;
+    --accent-soft: #eaf0fd;
+    --chip: #f1f1ed;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111316;
+      --surface: #181b1f;
+      --text: #e8e9eb;
+      --muted: #9a9fa7;
+      --line: #2a2e34;
+      --accent: #7ea4ff;
+      --accent-soft: #1c2640;
+      --chip: #22262c;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 56px 20px 80px; }
+
+  header { padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+  .name { font-size: 2.1rem; font-weight: 700; margin: 0; letter-spacing: .02em; line-height: 1.3; }
+  .name small { display: block; font-size: 1rem; font-weight: 500; color: var(--muted); letter-spacing: 0; margin-top: 4px; }
+  .role { margin: 14px 0 0; font-size: 1.05rem; }
+  .contact { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 18px; padding: 0; list-style: none; font-size: .92rem; }
+  .contact li { display: flex; align-items: center; gap: 6px; color: var(--muted); }
+  .contact svg { width: 16px; height: 16px; flex: none; }
+
+  section { padding-top: 40px; }
+  h2 {
+    font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 18px; display: flex; align-items: center; gap: 12px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  .item { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; margin-bottom: 26px; }
+  .item:last-child { margin-bottom: 0; }
+  .item h3 { margin: 0; font-size: 1.05rem; font-weight: 700; line-height: 1.5; }
+  .item .sub { grid-column: 1; color: var(--muted); font-size: .95rem; }
+  .item .date { grid-column: 2; grid-row: 1; font-family: "JetBrains Mono", monospace; font-size: .8rem; color: var(--muted); white-space: nowrap; padding-top: 3px; }
+  .item .body { grid-column: 1 / -1; margin-top: 6px; font-size: .95rem; }
+  .item ul { margin: 6px 0 0; padding-left: 1.2em; }
+  .item li { margin: 2px 0; }
+
+  .venue {
+    display: inline-block; font-family: "JetBrains Mono", monospace; font-size: .75rem; font-weight: 500;
+    color: var(--accent); background: var(--accent-soft); border-radius: 4px; padding: 1px 8px; margin-right: 8px;
+  }
+  .courses { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .chip { font-size: .82rem; background: var(--chip); border-radius: 999px; padding: 2px 12px; }
+  .note { font-size: .82rem; color: var(--muted); }
+
+  .skills { display: grid; grid-template-columns: 120px 1fr; gap: 12px 16px; font-size: .95rem; }
+  .skills dt { color: var(--muted); }
+  .skills dd { margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+
+  .research { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; }
+  .card h3 { margin: 0 0 4px; font-size: 1rem; }
+  .card p { margin: 0; font-size: .9rem; color: var(--muted); }
+
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); font-size: .8rem; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .print-btn { background: none; border: 1px solid var(--line); color: var(--muted); border-radius: 6px; padding: 2px 10px; font: inherit; cursor: pointer; }
+  .print-btn:hover { color: var(--text); border-color: var(--muted); }
+
+  @media (max-width: 560px) {
+    .wrap { padding: 36px 16px 56px; }
+    .name { font-size: 1.7rem; }
+    .item { grid-template-columns: 1fr; }
+    .item .date { grid-column: 1; grid-row: auto; padding-top: 0; }
+    .skills { grid-template-columns: 1fr; gap: 4px; }
+    .skills dd { margin-bottom: 10px; }
+  }
+  @media print {
+    :root { --bg:#fff; --surface:#fff; --text:#000; --muted:#444; --line:#ccc; --accent:#1a47b8; --accent-soft:#eef2fc; --chip:#f2f2f2; }
+    .wrap { padding: 0; max-width: none; }
+    section { padding-top: 22px; break-inside: avoid; }
+    .print-btn { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1 class="name">Sean Chou<small>Chou, Tzu-Hsiang</small></h1>
+    <p class="role">國立陽明交通大學 網路工程研究所 碩士生・研究神經影像／影片壓縮與 World Model</p>
+    <ul class="contact">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>
+        <a href="mailto:sean1352468@gmail.com">sean1352468@gmail.com</a>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        <a href="https://github.com/sean41880">github.com/sean41880</a>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        新竹，台灣
+      </li>
+    </ul>
+  </header>
+
+  <section id="education">
+    <h2>學歷</h2>
+    <div class="item">
+      <h3>國立陽明交通大學 網路工程研究所</h3>
+      <span class="date">2025.08 – 2026.12（預計）</span>
+      <div class="sub">碩士・新竹</div>
+      <div class="body">
+        修習課程全數取得 A：
+        <div class="courses">
+          <span class="chip">Database System</span>
+          <span class="chip">Machine Learning</span>
+          <span class="chip">Computational Photography</span>
+          <span class="chip">Chicago Capstone Experience</span>
+          <span class="chip">Software Engineering I</span>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <h3>國立陽明交通大學 資訊工程學系</h3>
+      <span class="date">2020.09 – 2024.06</span>
+      <div class="sub">學士・新竹</div>
+      <div class="body">
+        相關課程（A）：
+        <div class="courses">
+          <span class="chip">Software Studio</span>
+          <span class="chip">System Integration Implementation (I)</span>
+          <span class="chip">Introduction to Programming (I)</span>
+          <span class="chip">Introduction to Machine Learning</span>
+          <span class="chip">Introduction to Artificial Intelligence</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>論文發表</h2>
+    <div class="item">
+      <h3>Network Quantization in Neural Video Coding: A Comparative Study Across Coding Frameworks and Temporal Buffering Strategies</h3>
+      <span class="date">2026</span>
+      <div class="body"><span class="venue">ICIP 2026</span>比較不同神經影片編碼框架與時序緩衝策略下的網路量化效果。</div>
+    </div>
+    <div class="item">
+      <h3>NICER: Neural Image Codecs with Randomness for Perceptual Quality Adaptation</h3>
+      <span class="date">2026</span>
+      <div class="body"><span class="venue">VCIP 2026</span>在神經影像編解碼器中引入隨機性，以適應不同的感知品質需求。</div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>研究方向</h2>
+    <div class="research">
+      <div class="card">
+        <h3>Image / Video Compression</h3>
+        <p>實驗室研究組別：神經影像與影片壓縮、模型量化。</p>
+      </div>
+      <div class="card">
+        <h3>World Model / Physical AI</h3>
+        <p>實驗室研究組別：世界模型與實體 AI。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>專案經歷</h2>
+    <div class="item">
+      <h3>Mushroom Species Identification</h3>
+      <span class="date">2022.12 – 2023.01</span>
+      <div class="body">
+        以機器學習方法分類九種菇類影像，訓練 CNN、VGG16 與 Xception 模型，其中 Xception 準確率達 <strong>0.8133</strong>。
+      </div>
+    </div>
+    <div class="item">
+      <h3>大學專題研究</h3>
+      <span class="date">2023.07 – 2023.12</span>
+      <div class="body">
+        調整系統的記憶體階層架構，將資料統一存放於 Unified Memory。
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>技能</h2>
+    <dl class="skills">
+      <dt>程式語言</dt>
+      <dd><span class="chip">C / C++</span><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">HTML / CSS</span><span class="chip">MySQL</span></dd>
+      <dt>框架與領域</dt>
+      <dd><span class="chip">React</span><span class="chip">Machine Learning</span><span class="chip">Artificial Intelligence</span><span class="chip">Web 前後端開發</span></dd>
+      <dt>基礎</dt>
+      <dd><span class="chip">演算法</span><span class="chip">資料結構</span></dd>
+      <dt>語言</dt>
+      <dd><span class="chip">中文（母語）</span><span class="chip">英文</span></dd>
+    </dl>
+  </section>
+
+  <section id="activities">
+    <h2>課外活動</h2>
+    <div class="item">
+      <h3>資工系羽球系隊、桌球系隊</h3>
+      <span class="date">2022.02 – 2023.06</span>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Sean Chou</span>
+    <button class="print-btn" onclick="window.print()">列印 / 存成 PDF</button>
+  </footer>
+
+</div>
+</body>
+</html>
