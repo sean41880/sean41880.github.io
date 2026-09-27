@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>周子翔 Sean Chou｜履歷</title>
-<meta name="description" content="Chou, Tzu-Hsiang (Sean) — 陽明交通大學網路工程研究所。研究領域：神經影像／影片壓縮、World Model。">
+<meta name="description" content="Chou, Tzu-Hsiang (Sean) — 陽明交通大學網路工程研究所。研究領域：神經影像／視訊壓縮、世界模型與機器人操作。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -81,10 +81,13 @@
   .skills dt { color: var(--muted); }
   .skills dd { margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 
-  .research { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; }
-  .card h3 { margin: 0 0 4px; font-size: 1rem; }
-  .card p { margin: 0; font-size: .9rem; color: var(--muted); }
+  .area { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr auto; gap: 0 16px; margin-top: 14px; padding-left: 14px; border-left: 2px solid var(--line); }
+  .area h4 { margin: 0; font-size: .98rem; font-weight: 700; }
+  .area .date { grid-column: 2; grid-row: 1; }
+  .area ul { grid-column: 1 / -1; font-size: .95rem; }
+  .tags { color: var(--muted); font-size: .88rem; }
+  .authors { font-size: .9rem; color: var(--muted); margin-top: 4px; }
+  .authors strong { color: var(--text); }
 
   footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); font-size: .8rem; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
   .print-btn { background: none; border: 1px solid var(--line); color: var(--muted); border-radius: 6px; padding: 2px 10px; font: inherit; cursor: pointer; }
@@ -95,6 +98,8 @@
     .name { font-size: 1.7rem; }
     .item { grid-template-columns: 1fr; }
     .item .date { grid-column: 1; grid-row: auto; padding-top: 0; }
+    .area { grid-template-columns: 1fr; }
+    .area .date { grid-column: 1; grid-row: auto; }
     .skills { grid-template-columns: 1fr; gap: 4px; }
     .skills dd { margin-bottom: 10px; }
   }
@@ -111,7 +116,7 @@
 
   <header>
     <h1 class="name">周子翔 Sean Chou<small>Chou, Tzu-Hsiang</small></h1>
-    <p class="role">國立陽明交通大學 網路工程研究所 碩士生・研究神經影像／影片壓縮與 World Model</p>
+    <p class="role">國立陽明交通大學 網路工程研究所 碩士生・研究神經影像／視訊壓縮與世界模型</p>
     <ul class="contact">
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>
@@ -131,33 +136,64 @@
   <section id="education">
     <h2>學歷</h2>
     <div class="item">
-      <h3>國立陽明交通大學 網路工程研究所</h3>
-      <!-- 日期待補：<span class="date">2025.08 – 2026.12（預計）</span> -->
-      <div class="sub">碩士・新竹</div>
+      <h3>國立陽明交通大學</h3>
+      <span class="date">2025.08 – 2027.06（預計）</span>
+      <div class="sub">網路工程研究所 碩士</div>
+    </div>
+    <div class="item">
+      <h3>國立陽明交通大學</h3>
+      <span class="date">2020.09 – 2024.06</span>
+      <div class="sub">資訊工程學系 學士</div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>研究經歷</h2>
+    <div class="item">
+      <h3>多媒體架構與處理實驗室（MAPL）</h3>
+      <span class="date">2025.07 – 至今</span>
+      <div class="sub">研究生・指導教授：彭文孝 教授</div>
+      <div class="area">
+        <h4>神經網路影像與視訊壓縮</h4>
+        <span class="date">2025.07 – 至今</span>
+        <ul>
+          <li>負責實驗，分析網路量化對神經視訊編碼器的影響，比較不同編碼架構與時序緩衝策略；共同撰寫論文（ICIP 2026）</li>
+          <li>負責 NICER 的實驗，NICER 是一種加入隨機性以調整感知品質的神經影像編碼器；共同撰寫論文（VCIP 2026，已接受）</li>
+        </ul>
+      </div>
+      <div class="area">
+        <h4>世界模型與靈巧機械手操作</h4>
+        <span class="date">2026.06 – 至今</span>
+        <ul>
+          <li>開始以強化學習研究機械手臂操作的世界模型與實體 AI（Physical AI）</li>
+          <li>建置機械手臂與靈巧手作為實驗平台</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>專案</h2>
+    <div class="item">
+      <h3>遊戲畫面超解析度</h3>
+      <span class="date">2026 春季</span>
+      <div class="sub tags">Python・PyTorch・HAT・EDSR</div>
       <div class="body">
-        修習課程全數取得 A：
-        <div class="courses">
-          <span class="chip">Database System</span>
-          <span class="chip">Machine Learning</span>
-          <span class="chip">Computational Photography</span>
-          <span class="chip">Chicago Capstone Experience</span>
-          <span class="chip">Software Engineering I</span>
-        </div>
+        <ul>
+          <li>團隊合作微調 ImageNet 預訓練的 HAT 模型，將遊戲截圖進行 4 倍超解析度（Kaggle 競賽），並以 PSNR 過濾未對齊的訓練資料、使用測試時資料增強（TTA）</li>
+          <li>在私有測試集達到 <strong>34.05 dB PSNR</strong>，優於 bicubic（32.28 dB）與 EDSR（32.97 dB）</li>
+        </ul>
       </div>
     </div>
     <div class="item">
-      <h3>國立陽明交通大學 資訊工程學系</h3>
-      <!-- 日期待補：<span class="date">2020.09 – 2024.06</span> -->
-      <div class="sub">學士・新竹</div>
+      <h3>OpenACC-UM：為 OpenACC 加入統一記憶體支援</h3>
+      <span class="date">2023.07 – 2023.12</span>
+      <div class="sub tags">C/C++・GCC Internals・OpenACC・CUDA</div>
       <div class="body">
-        相關課程（A）：
-        <div class="courses">
-          <span class="chip">Software Studio</span>
-          <span class="chip">System Integration Implementation (I)</span>
-          <span class="chip">Introduction to Programming (I)</span>
-          <span class="chip">Introduction to Machine Learning</span>
-          <span class="chip">Introduction to Artificial Intelligence</span>
-        </div>
+        <ul>
+          <li>撰寫 GCC 13 編譯器 pass，自動將 heap 資料配置在 NVIDIA 統一記憶體（Unified Memory），讓 OpenACC 程式不必手動撰寫 CPU 與 GPU 之間的資料搬移指令</li>
+          <li>以 PolyBench 評估，共省去 <strong>30 條</strong>資料映射指令</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -166,68 +202,41 @@
     <h2>論文發表</h2>
     <div class="item">
       <h3>Network Quantization in Neural Video Coding: A Comparative Study Across Coding Frameworks and Temporal Buffering Strategies</h3>
-      <!-- 日期待補：<span class="date">2026</span> -->
-      <div class="body"><span class="venue">ICIP 2026</span>比較不同神經影片編碼框架與時序緩衝策略下的網路量化效果。</div>
+      <div class="body">
+        <span class="venue">ICIP 2026</span>IEEE International Conference on Image Processing, Sep. 2026
+        <div class="authors">H.-T. Phung, Y.-H. Lin, C.-H. Wu, R. Conceição, <strong>T.-H. Chou</strong>, M. Porto, L. V. Agostini, W.-H. Peng</div>
+      </div>
     </div>
     <div class="item">
       <h3>NICER: Neural Image Codecs with Randomness for Perceptual Quality Adaptation</h3>
-      <!-- 日期待補：<span class="date">2026</span> -->
-      <div class="body"><span class="venue">VCIP 2026</span>在神經影像編解碼器中引入隨機性，以適應不同的感知品質需求。</div>
-    </div>
-  </section>
-
-  <section id="research">
-    <h2>研究方向</h2>
-    <div class="research">
-      <div class="card">
-        <h3>Image / Video Compression</h3>
-        <p>實驗室研究組別：神經影像與影片壓縮、模型量化。</p>
-      </div>
-      <div class="card">
-        <h3>World Model / Physical AI</h3>
-        <p>實驗室研究組別：世界模型與實體 AI。</p>
+      <div class="body">
+        <span class="venue">VCIP 2026</span>IEEE International Conference on Visual Communications and Image Processing（已接受）
+        <div class="authors">H.-T. Phung, C.-H. Wu, Y.-K. Ho, Y.-H. Lin, <strong>T.-H. Chou</strong>, L. W. Tavares, G. R. Corrêa, W.-H. Peng</div>
       </div>
     </div>
   </section>
 
-  <section id="projects">
-    <h2>專案經歷</h2>
+  <section id="teaching">
+    <h2>教學經歷</h2>
     <div class="item">
-      <h3>Mushroom Species Identification</h3>
-      <!-- 日期待補：<span class="date">2022.12 – 2023.01</span> -->
-      <div class="body">
-        以機器學習方法分類九種菇類影像，訓練 CNN、VGG16 與 Xception 模型，其中 Xception 準確率達 <strong>0.8133</strong>。
-      </div>
-    </div>
-    <div class="item">
-      <h3>大學專題研究</h3>
-      <!-- 日期待補：<span class="date">2023.07 – 2023.12</span> -->
-      <div class="body">
-        調整系統的記憶體階層架構，將資料統一存放於 Unified Memory。
-      </div>
+      <h3>機率 課程助教</h3>
+      <span class="date">2025 春季</span>
+      <div class="sub">國立陽明交通大學</div>
     </div>
   </section>
 
   <section id="skills">
-    <h2>技能</h2>
+    <h2>技能與語言</h2>
     <dl class="skills">
       <dt>程式語言</dt>
-      <dd><span class="chip">C / C++</span><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">HTML / CSS</span><span class="chip">MySQL</span></dd>
-      <dt>框架與領域</dt>
-      <dd><span class="chip">React</span><span class="chip">Machine Learning</span><span class="chip">Artificial Intelligence</span><span class="chip">Web 前後端開發</span></dd>
-      <dt>基礎</dt>
-      <dd><span class="chip">演算法</span><span class="chip">資料結構</span></dd>
+      <dd><span class="chip">Python</span><span class="chip">C / C++</span><span class="chip">MATLAB</span></dd>
+      <dt>機器學習與工具</dt>
+      <dd><span class="chip">PyTorch</span><span class="chip">NumPy</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">Linux</span></dd>
+      <dt>系統與 GPU</dt>
+      <dd><span class="chip">GCC Internals</span><span class="chip">OpenACC</span><span class="chip">CUDA</span></dd>
       <dt>語言</dt>
       <dd><span class="chip">中文（母語）</span><span class="chip">英文</span></dd>
     </dl>
-  </section>
-
-  <section id="activities">
-    <h2>課外活動</h2>
-    <div class="item">
-      <h3>資工系羽球系隊、桌球系隊</h3>
-      <!-- 日期待補：<span class="date">2022.02 – 2023.06</span> -->
-    </div>
   </section>
 
   <footer>
