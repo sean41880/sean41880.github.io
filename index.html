@@ -139,11 +139,30 @@
       <h3>國立陽明交通大學</h3>
       <span class="date">2025.08 – 2027.06（預計）</span>
       <div class="sub">網路工程研究所 碩士</div>
+      <div class="body">
+        相關課程（皆 A 以上）：
+        <div class="courses">
+          <span class="chip">視訊壓縮</span>
+          <span class="chip">影像與視訊生成</span>
+          <span class="chip">深度學習</span>
+          <span class="chip">深度學習實驗</span>
+        </div>
+      </div>
     </div>
     <div class="item">
       <h3>國立陽明交通大學</h3>
-      <span class="date">2020.09 – 2024.06</span>
+      <span class="date">2020.09 – 2025.06</span>
       <div class="sub">資訊工程學系 學士</div>
+    </div>
+  </section>
+
+  <section id="interests">
+    <h2>研究興趣</h2>
+    <div class="courses">
+      <span class="chip">神經網路影像與視訊壓縮</span>
+      <span class="chip">模型量化</span>
+      <span class="chip">世界模型</span>
+      <span class="chip">以強化學習進行機器人操作</span>
     </div>
   </section>
 
@@ -157,16 +176,14 @@
         <h4>神經網路影像與視訊壓縮</h4>
         <span class="date">2025.07 – 至今</span>
         <ul>
-          <li>負責實驗，分析網路量化對神經視訊編碼器的影響，比較不同編碼架構與時序緩衝策略；共同撰寫論文（ICIP 2026）</li>
-          <li>負責 NICER 的實驗，NICER 是一種加入隨機性以調整感知品質的神經影像編碼器；共同撰寫論文（VCIP 2026，已接受）</li>
+          <li>負責實驗並共同撰寫兩篇論文：神經視訊編碼器的網路量化研究（ICIP 2026），以及可調整感知品質的神經影像編碼器 NICER（VCIP 2026，已接受）</li>
         </ul>
       </div>
       <div class="area">
         <h4>世界模型與靈巧機械手操作</h4>
         <span class="date">2026.06 – 至今</span>
         <ul>
-          <li>開始以強化學習研究機械手臂操作的世界模型與實體 AI（Physical AI）</li>
-          <li>建置機械手臂與靈巧手作為實驗平台</li>
+          <li>建置機械手臂與靈巧手實驗平台，進行以強化學習為基礎的世界模型研究</li>
         </ul>
       </div>
     </div>
@@ -180,8 +197,17 @@
       <div class="sub tags">Python・PyTorch・HAT・EDSR</div>
       <div class="body">
         <ul>
-          <li>團隊合作微調 ImageNet 預訓練的 HAT 模型，將遊戲截圖進行 4 倍超解析度（Kaggle 競賽），並以 PSNR 過濾未對齊的訓練資料、使用測試時資料增強（TTA）</li>
-          <li>在私有測試集達到 <strong>34.05 dB PSNR</strong>，優於 bicubic（32.28 dB）與 EDSR（32.97 dB）</li>
+          <li>團隊合作微調 ImageNet 預訓練的 HAT 模型，將遊戲截圖進行 4 倍超解析度（Kaggle 競賽），PSNR 從 bicubic 的 32.28 dB 提升到 <strong>34.05 dB</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div class="item">
+      <h3>自適應自迴歸影像生成</h3>
+      <span class="date">2025 暑假</span>
+      <div class="sub tags">Python・PyTorch・Diffusion Models</div>
+      <div class="body">
+        <ul>
+          <li>團隊合作改進 MAR，加入可學習的 token 生成順序與每步生成數量策略，以及自適應的溫度與 CFG</li>
         </ul>
       </div>
     </div>
@@ -191,8 +217,7 @@
       <div class="sub tags">C/C++・GCC Internals・OpenACC・CUDA</div>
       <div class="body">
         <ul>
-          <li>撰寫 GCC 13 編譯器 pass，自動將 heap 資料配置在 NVIDIA 統一記憶體（Unified Memory），讓 OpenACC 程式不必手動撰寫 CPU 與 GPU 之間的資料搬移指令</li>
-          <li>以 PolyBench 評估，共省去 <strong>30 條</strong>資料映射指令</li>
+          <li>撰寫 GCC 13 編譯器 pass，自動將 heap 資料配置在 NVIDIA 統一記憶體（Unified Memory），在 PolyBench 上省去 <strong>30 條</strong>手動資料映射指令</li>
         </ul>
       </div>
     </div>
@@ -220,7 +245,7 @@
     <h2>教學經歷</h2>
     <div class="item">
       <h3>機率 課程助教</h3>
-      <span class="date">2025 春季</span>
+      <span class="date">2025 秋季</span>
       <div class="sub">國立陽明交通大學</div>
     </div>
   </section>
@@ -228,12 +253,10 @@
   <section id="skills">
     <h2>技能與語言</h2>
     <dl class="skills">
-      <dt>程式語言</dt>
-      <dd><span class="chip">Python</span><span class="chip">C / C++</span><span class="chip">MATLAB</span></dd>
-      <dt>機器學習與工具</dt>
-      <dd><span class="chip">PyTorch</span><span class="chip">NumPy</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">Linux</span></dd>
-      <dt>系統與 GPU</dt>
-      <dd><span class="chip">GCC Internals</span><span class="chip">OpenACC</span><span class="chip">CUDA</span></dd>
+      <dt>程式與機器學習</dt>
+      <dd><span class="chip">Python</span><span class="chip">C / C++</span><span class="chip">MATLAB</span><span class="chip">PyTorch</span><span class="chip">NumPy</span></dd>
+      <dt>系統與工具</dt>
+      <dd><span class="chip">GCC Internals</span><span class="chip">OpenACC</span><span class="chip">CUDA</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">Linux</span></dd>
       <dt>語言</dt>
       <dd><span class="chip">中文（母語）</span><span class="chip">英文</span></dd>
     </dl>
